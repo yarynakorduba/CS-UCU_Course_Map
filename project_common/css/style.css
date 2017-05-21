@@ -1,0 +1,466 @@
+* {
+    box-sizing: border-box;
+}
+
+.tabs {
+    position: relative;
+    margin: 40px auto;
+    width: 1010px;
+}
+
+.tabs input {
+    position: absolute;
+    width: 120px;
+    height: 40px;
+    opacity: 0;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.tabs input#tab-2 {
+    left: 105px;
+}
+
+.tabs input#tab-3 {
+    left: 210px;
+}
+
+.tabs input#tab-4 {
+    left: 320px;
+}
+
+.tabs > label {
+    background: #84c543;
+    background: -moz-linear-gradient(top, #84c543 0%, #75ae3b 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #84c543), color-stop(100%, #75ae3b));
+    background: -webkit-linear-gradient(top, #84c543 0%, #75ae3b 100%);
+    background: -o-linear-gradient(top, #84c543 0%, #75ae3b 100%);
+    background: -ms-linear-gradient(top, #84c543 0%, #75ae3b 100%);
+    background: linear-gradient(top, #84c543 0%, #75ae3b 100%);
+    font-size: 15px;
+    line-height: 40px;
+    height: 40px;
+    position: relative;
+    padding: 0 20px;
+    float: left;
+    display: block;
+    color: #fff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.3);
+    border-radius: 3px 3px 0 0;
+    box-shadow: 2px 0 2px rgba(0, 0, 0, 0.1), -2px 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.tabs > label:after {
+    content: '';
+    background: #fff;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    display: block;
+}
+
+.tabs > input:hover + label {
+    background: #84c543;
+    text-decoration: none;
+}
+
+.tabs > label:first-of-type {
+    z-index: 4;
+    box-shadow: 2px 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.tab-label-2 {
+    z-index: 3;
+}
+
+.tab-label-3 {
+    z-index: 2;
+}
+
+.tab-label-4 {
+    z-index: 1;
+}
+
+.tabs > input:checked + label {
+    background: #fff;
+    z-index: 6;
+    color: #75ae3b;
+
+    -webkit-animation: page 0.2s linear;
+    -moz-animation: page 0.2s linear;
+    -ms-animation: page 0.2s linear;
+    -o-animation: page 0.2s linear;
+    animation: page 0.2s linear;
+}
+
+.clear-shadow {
+    clear: both;
+}
+
+.content {
+    background: #fff;
+    position: relative;
+    width: 100%;
+    height: 370px;
+    z-index: 5;
+    box-shadow: 0 -2px 3px -2px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 0 3px 3px 3px;
+    overflow: hidden;
+}
+
+.content-body {
+    position: absolute;
+    top: 0;
+    padding: 10px 0;
+    z-index: 1;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100%;
+    opacity: 0;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    transition: all linear 0.3s;
+}
+
+.content-1, .content-3 {
+    -webkit-transform: translateX(-250px);
+    -moz-transform: translateX(-250px);
+    -o-transform: translateX(-250px);
+    -ms-transform: translateX(-250px);
+    transform: translateX(-250px);
+}
+
+.content-2, .content-4 {
+    -webkit-transform: translateX(250px);
+    -moz-transform: translateX(250px);
+    -o-transform: translateX(250px);
+    -ms-transform: translateX(250px);
+    transform: translateX(250px);
+}
+
+.tabs input.tab-selector-1:checked ~ .content .content-1,
+.tabs input.tab-selector-2:checked ~ .content .content-2,
+.tabs input.tab-selector-3:checked ~ .content .content-3,
+.tabs input.tab-selector-4:checked ~ .content .content-4 {
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+    z-index: 100;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+    -webkit-transition: all ease-out 0.2s 0.1s;
+    -moz-transition: all ease-out 0.2s 0.1s;
+    -o-transition: all ease-out 0.2s 0.1s;
+    -ms-transition: all ease-out 0.2s 0.1s;
+    transition: all ease-out 0.2s 0.1s;
+}
+
+.content-3 .col {
+  margin-top: -2%;
+}
+
+.content-4 {
+  width: 100%;
+}
+
+.content-4 .col {
+  width: 40%;
+  float: left;
+  margin-left: 7%;
+  margin-top: -2%;
+
+}
+
+.content-4 ul li .subject {
+  margin-bottom: 1%;
+}
+
+.content div h2,
+.content div h3 {
+    color: #398080;
+}
+
+.content div p {
+    font-size: 14px;
+    line-height: 22px;
+    font-style: italic;
+    text-align: left;
+    margin: 0;
+    color: #777;
+    padding-left: 15px;
+    font-family: Cambria, Georgia, serif;
+}
+
+.col {
+    width: 33%;
+    float: left;
+    padding: 10px;
+    position: relative;
+    /*border-right: 3px dashed;
+    border-color: grey;
+    border-radius: 10%;*/
+}
+
+.col ul {
+    padding: 0;
+}
+
+.col ul li {
+    list-style-type: none;
+}
+
+.col h1 {
+    color: #777;
+    font-size: 0.8em;
+    margin: 0.83em 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.subject label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.subject label:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #fff;
+    right: 5px;
+    top: 12px;
+}
+
+.subject input[type=checkbox]:checked ~ label:before {
+    transform: rotate(180deg);
+}
+
+.subject input[type=checkbox] {
+    overflow: auto;
+    cursor: pointer;
+    opacity: 0;
+    width: 100%;
+    height: 20%;
+    margin-top: -7%;
+    margin-right: 10%;
+}
+
+
+.subject > div {
+    margin: 0;
+    font-size: 14px;
+    line-height: 22px;
+    font-family: Cambria, Georgia, serif;
+    transform: translate(0, 0);
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    position: inherit;
+}
+
+.subject input[type=checkbox]:checked ~ div {
+    margin-top: 10px;
+    height: auto;
+    opacity: 1;
+    z-index: 7;
+}
+
+.subject {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.subject header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-right: 25px; padding-left: 10px;
+    color: #fff;
+
+    border-radius: 3px;
+    font-size: 16px;
+    text-align: center;
+    height: 28px;
+}
+
+.subject header h2 {
+    color: #fff;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+.subject header span {
+    border-left: 1px dotted #fff;
+    padding-left: 5px;
+    font-size: 0.8em;
+}
+
+.subject h2 {
+    font-size: 15px;
+}
+
+/*.subject .decret {
+  float: right;
+  margin-right: 50px;
+  margin-top: 6px;
+}*/
+
+
+.color-explain {
+    background: #fff;
+    width: 1010px;
+    height: 70px;
+    margin: auto;
+    border-radius: 3px;
+}
+
+.credits {
+    padding: 7px 0;
+    font-weight: bold;
+}
+
+.cred-1 {
+    float: left;
+    width: 42%;
+    padding-left: 10px;
+}
+
+.colors {
+    width: 12%;
+    float: left;
+    margin: 0 7px;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    height: 25px;
+    padding-top: 2px;
+}
+
+.blue {
+    background-color: #0A5599;
+}
+
+.red {
+    background-color: #B82E00;
+}
+
+.purple {
+    background: #1E0D38;
+}
+
+.green1 {
+    background: #027939;
+}
+
+.green2 {
+    background: #84c543;
+}
+
+.blue2 {
+    background: #012044;
+}
+
+.green3 {
+    background: #084308;
+}
+
+.color-explain .credits {
+  margin-left: 31px;
+}
+.all-colors .green1 {
+  margin-left: 50px;
+  width: 150px;
+}
+.all-colors .green2 {
+  width: 60px;
+}
+.all-colors .green3 {
+  width: 150px;
+}
+
+@keyframes "page" {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: 10px;
+    }
+    100% {
+        left: 0;
+    }
+
+}
+
+@-moz-keyframes page {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: 10px;
+    }
+    100% {
+        left: 0;
+    }
+
+}
+
+@-webkit-keyframes "page" {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: 10px;
+    }
+    100% {
+        left: 0;
+    }
+
+}
+
+@-ms-keyframes "page" {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: 10px;
+    }
+    100% {
+        left: 0;
+    }
+
+}
+
+@-o-keyframes "page" {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: 10px;
+    }
+    100% {
+        left: 0;
+    }
+
+}

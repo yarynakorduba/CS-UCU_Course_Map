@@ -1,0 +1,40 @@
+
+body{
+	font-family: 'Open Sans Condensed','Arial Narrow', serif;
+	background: #ddd url(../images/teachers.png) repeat top ;
+	font-weight: 400;
+	font-size: 15px;
+
+}
+
+.container{
+	width: 100%;
+	position: relative;
+}
+
+.container > header{
+	margin: 20px;
+	padding: 20px 10px 10px 10px;
+	position: relative;
+	display: block;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    text-align: center;
+}
+.container > header h1{
+	font-size: 50px;
+	line-height: 30px;
+	margin: 0;
+	position: relative;
+	font-weight: 300;
+	color: white;
+	text-shadow: 2px 2px 2px  rgba(102, 0, 204, 1);
+}
+.container > header h1 span{
+	font-weight: 800;
+	color: #90c63c;
+
+}
+
+.content-body > div > h2{
+	color: black;
+}
